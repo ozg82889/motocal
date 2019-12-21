@@ -5,7 +5,6 @@ const {
   isDarkOpus,
   calcCombinations,
   getInitialTotals,
-  treatSupportAbility,
   calcOneCombination,
   isValidResult,
   initializeTotals
@@ -82,7 +81,6 @@ const calculateResult = (
     }
 
     var totals = getInitialTotals(prof, chara, summon);
-    treatSupportAbility(totals, chara, totalBuff);
     var itr = combinations.length;
     var totalItr = itr * summon.length * Object.keys(totals).length;
 
@@ -95,6 +93,7 @@ const calculateResult = (
         combinations[i],
         summon,
         prof,
+        chara,
         arml,
         totals,
         totalBuff
