@@ -2860,6 +2860,7 @@ module.exports.initializeTotals = function (totals) {
         totals[key]["debuffResistance"] = 0;
         totals[key]["cosmosDebuffResistance"] = 0;
         totals[key]["tenshiDamageUP"] = 0;
+        totals[key]["charaDamageUP"] = 0;
         totals[key]["charaUniqueDamageUP"] = 0;
         totals[key]["damageUPOnlyNormalBuff"] = 0;
         totals[key]['covenant'] = null;
