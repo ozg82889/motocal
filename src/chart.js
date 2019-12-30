@@ -311,9 +311,9 @@ var HPChart = CreateClass({
                         }
                     }
                     loadoutSheet += "|-\n";
-                    loadoutSheet += "| rowspan=\""+rowspan+"\"| " + sl.names[j].replace(/\r?\n/g, "") + "\n";
-                    loadoutSheet += "| rowspan=\""+rowspan+"\"| " + this.getCommonSummonName(s[i].selfElement, s[i].selfSummonType, s[i].selfSummonAmount, locale) + "<br><br>" + this.getCommonSummonName(s[i].friendElement, s[i].friendSummonType, s[i].friendSummonAmount, locale) +"\n";
-                    loadoutSheet += "| rowspan=\""+rowspan+"\"| ";
+                    loadoutSheet += "| rowspan=\""+rowspan+"\" style=\"border-width: thick thin thin thin\"| " + sl.names[j].replace(/\r?\n/g, "") + "\n";
+                    loadoutSheet += "| rowspan=\""+rowspan+"\" style=\"border-width: thick thin thin thin\"| " + this.getCommonSummonName(s[i].selfElement, s[i].selfSummonType, s[i].selfSummonAmount, locale) + "<br><br>" + this.getCommonSummonName(s[i].friendElement, s[i].friendSummonType, s[i].friendSummonAmount, locale) +"\n";
+                    loadoutSheet += "| rowspan=\""+rowspan+"\" style=\"border-width: thick thin thin thin\"| ";
                     if ( s[i].attack != 0) {
                         loadoutSheet += intl.translate("合計攻撃力", locale) + ": " + s[i].attack + "<br>";
                     }
@@ -339,12 +339,20 @@ var HPChart = CreateClass({
                         loadoutSheet += intl.translate("DA加護", locale) + ": " + s[i].DA + "%<br>";
                     }
                     loadoutSheet += "\n";
+                    var first = true;
                     for (var k = 0; k < sl.armlist[j].length; k++) {
                         if (sl.combinations[j][k] != 0) {
                             var arm = sl.armlist[j][k];
-                            loadoutSheet += "| " + sl.combinations[j][k] + " ";
-                            loadoutSheet += "|| {{Itm|" + arm.name.replace(/\[4凸]/g, "").replace(/\[5凸]/g, "").replace(/\[4★]/g, "").replace(/\[5★]/g, "").trim() + "}}  ";
-                            loadoutSheet += "|| " + (arm.slv > 10 ? (arm.slv > 15 ? "5{{star}}" : "4{{star}}") : "0-3{{star}}");
+                            if (first) {
+                                loadoutSheet += "| style=\"border-width: thick thin thin thin\"|" + sl.combinations[j][k] + " ";
+                                loadoutSheet += "|| style=\"border-width: thick thin thin thin\"|{{Itm|" + arm.name.replace(/\[4凸]/g, "").replace(/\[5凸]/g, "").replace(/\[4★]/g, "").replace(/\[5★]/g, "").trim() + "}}  ";
+                                loadoutSheet += "|| style=\"border-width: thick thin thin thin\"|" + (arm.slv > 10 ? (arm.slv > 15 ? "5{{star}}" : "4{{star}}") : "0-3{{star}}");
+                                first = false;
+                            } else {
+                                loadoutSheet += "| " + sl.combinations[j][k] + " ";
+                                loadoutSheet += "|| {{Itm|" + arm.name.replace(/\[4凸]/g, "").replace(/\[5凸]/g, "").replace(/\[4★]/g, "").replace(/\[5★]/g, "").trim() + "}}  ";
+                                loadoutSheet += "|| " + (arm.slv > 10 ? (arm.slv > 15 ? "5{{star}}" : "4{{star}}") : "0-3{{star}}");
+                            }
                             loadoutSheet += (arm.skill2.startsWith("opus") ? ", " + intl.translate(opusWeaponSkill1[arm.skill2].name, locale) + ", " + (arm.skill3.includes("normal") ? intl.translate(opusNormalWeaponSkill2[arm.skill3].name, locale): intl.translate(opusMagnaWeaponSkill2[arm.skill3].name, locale)) : "");
                             loadoutSheet += "\n";
                             loadoutSheet += "|- \n";
