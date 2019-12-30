@@ -1849,7 +1849,7 @@ var multiLangData = {
         "zh": "好友的召唤石",
     },
     "合計攻撃力": {
-        "en": "Total ATK",
+        "en": "Summons Total ATK",
         "ja": "合計攻撃力",
         "zh": "合计攻击力",
     },
@@ -1859,7 +1859,7 @@ var multiLangData = {
         "zh": "合计攻击力",
     },
     "合計HP": {
-        "en": "Total HP",
+        "en": "Summons Total HP",
         "ja": "合計HP",
         "zh": "合计HP",
     },
