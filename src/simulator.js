@@ -251,10 +251,9 @@ var Simulator = CreateClass({
         var buffs = this.state.buffs;
 
         for (var i = 0; i < storedCombinations.length; i++) {
-            var totalBuff = getTotalBuff(prof);
-            var totals = getInitialTotals(prof, chara, summon);
-
             for (var k = 0; k < maxTurn; k++) {
+                var totalBuff = getTotalBuff(prof);
+                var totals = getInitialTotals(prof, chara, summon);
                 // Buff, HP etc for each turn
                 totalBuff["normal"] = 0.01 * buffs["全体バフ"][k].normal;
                 totalBuff["element"] = 0.01 * buffs["全体バフ"][k].element;
