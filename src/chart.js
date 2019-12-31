@@ -16,7 +16,7 @@ var opusWeaponSkill1 = GlobalConst.opusWeaponSkill1;
 var opusNormalWeaponSkill2 = GlobalConst.opusNormalWeaponSkill2;
 var opusMagnaWeaponSkill2 = GlobalConst.opusMagnaWeaponSkill2;
 var _ua = GlobalConst._ua;
-var {generateHaisuiData, getTotalBuff, getInitialTotals, calcOneCombination, initializeTotals} = require('./global_logic.js');
+var {generateHaisuiData, getTotalBuff, getInitialTotals, calcOneCombination} = require('./global_logic.js');
 var colors = ['#000000','#000080','#00008B','#0000CD',
     '#0000FF','#006400','#008000','#008080',
     '#008B8B','#00BFFF','#00CED1','#00FA9A',
@@ -60,8 +60,6 @@ var HPChart = CreateClass({
         var armlist = props.armlist;
         var summon = props.summon;
         var chara = props.chara;
-        var totalBuff = getTotalBuff(prof);
-        var totals = getInitialTotals(prof, chara, summon);
 
         var res = [];
         for (var i = 0; i < summon.length; i++) {
@@ -69,11 +67,12 @@ var HPChart = CreateClass({
         }
 
         for (var i = 0; i < storedCombinations.length; i++) {
+            var totalBuff = getTotalBuff(prof);
+            var totals = getInitialTotals(prof, chara, summon);
             var oneres = calcOneCombination(storedCombinations[i], summon, prof, chara, armlist, totals, totalBuff);
             for (var j = 0; j < summon.length; j++) {
                 res[j].push({data: oneres[j], armNumbers: storedCombinations[i]});
             }
-            initializeTotals(totals)
         }
         // State in which recalculated data is stored in res
         // res[summonind][rank]

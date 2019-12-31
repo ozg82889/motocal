@@ -6,8 +6,7 @@ const {
   calcCombinations,
   getInitialTotals,
   calcOneCombination,
-  isValidResult,
-  initializeTotals
+  isValidResult
 } = require("./global_logic.js");
 const { keyTypes } = require("./global_const.js");
 
@@ -26,8 +25,6 @@ const calculateResult = (
     summon != undefined &&
     chara != undefined
   ) {
-    var totalBuff = getTotalBuff(prof);
-
     // Since the parameter added later may be NaN, additional processing
     // If sortKey is not a NaN, use that, NaN if it's general attack power
     var sortkeyname =
@@ -80,15 +77,16 @@ const calculateResult = (
       minSortKey[i] = -1;
     }
 
-    var totals = getInitialTotals(prof, chara, summon);
     var itr = combinations.length;
-    var totalItr = itr * summon.length * Object.keys(totals).length;
+    var totalItr = itr * summon.length * Object.keys(getInitialTotals(prof, chara, summon)).length;
 
     // If necessary values for preprocessing are prepared here
     var minHP =
       prof.minimumHP == undefined ? undefined : parseInt(prof.minimumHP);
 
     for (var i = 0; i < itr; i = (i + 1) | 0) {
+      var totals = getInitialTotals(prof, chara, summon);
+      var totalBuff = getTotalBuff(prof);
       var oneres = calcOneCombination(
         combinations[i],
         summon,
@@ -139,7 +137,6 @@ const calculateResult = (
           }
         }
       }
-      initializeTotals(totals);
     }
     // At this point, summonres should be an array of "array of associative arrays of result data corresponding to each summon"
     for (var i = 0; i < summon.length; i++) {
