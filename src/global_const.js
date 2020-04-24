@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 var React = require('react');
 var {Tooltip, OverlayTrigger} = require('react-bootstrap');
 var intl = require('./translate.js');
@@ -3337,3 +3338,5 @@ module.exports.selector.en.supportAbilities = Object.keys(supportAbilities).map(
 module.exports.selector.zh.supportAbilities = Object.keys(supportAbilities).map(function (opt) {
     return <option value={opt} key={opt}>{intl.translate(supportAbilities[opt].name, "zh")}</option>;
 });
+=======
+>>>>>>> Stashed changes

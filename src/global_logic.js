@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 const intl = require('./translate.js');
 const {
     LIMIT,
@@ -3652,3 +3653,5 @@ module.exports.generateSimulationData = function (res, turnBuff, arml, summon, p
     data["minMaxArr"] = minMaxArr;
     return data
 };
+=======
+>>>>>>> Stashed changes
