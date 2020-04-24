@@ -385,10 +385,8 @@ var HPChart = CreateClass({
                 var chartDataXArray = [];
                 var chartDataYArray = [];
                 for (var i = 1; i < graphData.length; i++) {
-                    if (graphData[i][j] != null) {
-                        chartDataXArray.push(graphData[i][0]);
-                        chartDataYArray.push(graphData[i][j]);
-                    }
+                    chartDataXArray.push(graphData[i][0]);
+                    chartDataYArray.push(graphData[i][j]);
                 }
                 var chartDataX = chartDataXArray.toString();
                 var chartDataY = chartDataYArray.toString();

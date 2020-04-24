@@ -1348,6 +1348,11 @@ var multiLangData = {
         "ja": "キャラ",
         "zh": "角色",
     },
+    "パーティ平均攻撃力": {
+        "en": "Party-Averaged Pure ATK",
+        "ja": "パーティ平均攻撃力(二手技巧無し)",
+        "zh": "全队平均攻击力(不考虑连击技巧)",
+    },
     "技巧平均攻撃力": {
         "en": "Party-Averaged ATK with Critical",
         "ja": "技巧平均攻撃力",
@@ -1408,20 +1413,10 @@ var multiLangData = {
         "ja": "予想ターンダメージ",
         "zh": "期望DPT",
     },
-    "予想秒毎ダメージ": {
-        "en": "Exp. Damage per Second", //a.k.a: expectedCycleDamagePerSecond
-        "ja": "予想秒ダメージ",
-        "zh": "期望DPS",
-    },
     "パーティ平均予想ターン毎ダメージ": {
-        "en": "Party-Averaged Exp. Damage per Turn",
+        "en": "Party-Averaged Exp. Turn Damage",
         "ja": "ターン毎ダメージの\nパーティ平均",
         "zh": "期望DPT/人",
-    },
-    "パーティ平均予想秒毎ダメージ": {
-        "en": "Party-Averaged Exp. Damage per Second",
-        "ja": "秒毎ダメージの\nパーティ平均",
-        "zh": "期望DPS/人",
     },
     "技巧倍率": {
         "en": "Critical Ratio",
@@ -1507,16 +1502,6 @@ var multiLangData = {
         "en": "Debuff Resistance",
         "ja": "弱体耐性率",
         "zh": "弱体耐性率",
-    },
-    "ターン毎の奥義ゲージ上昇量": {
-        "en": "Charge Bar Rise per Turn",
-        "ja": "ターン毎の\n奥義ゲージ上昇量",
-        "zh": "每回合奥义槽上升量",
-    },
-    "予想ターン毎の硬直": {
-        "en": "Exp. Lockout per Turn",
-        "ja": "予想ターン毎の硬直",
-        "zh": "予想ターン毎の硬直",
     },
     "有利": {
         "en": "Advantage",
@@ -1899,9 +1884,9 @@ var multiLangData = {
         "zh": "DA加护",
     },
     "DA加護説明": {
-        "en": "Halluel and Malluel(5~10%)etc.",
+        "en": "Halluel and Malluel(5~10%) etc.",
         "ja": "ハールート・マールート(5~10%)など",
-        "zh": "Halluel and Malluel(5~10%)etc.",
+        "zh": "Halluel and Malluel(5~10%) etc.",
     },
     "TA加護": {
         "en": "TA Aura",
@@ -1954,9 +1939,9 @@ var multiLangData = {
         "zh": "Shiva Buff",
     },
     "シヴァバフ説明": {
-        "en": "All Allies gain 100% other buff, and DMG cap +500000.",
-        "ja": "パーティ全体に別枠100%を付与し、ダメージ上限を500000加算します。",
-        "zh": "All Allies gain 100% other buff, and DMG cap +500000.",
+        "en": "All Allies gain 100% other buff, and raise DMG cap.",
+        "ja": "パーティ全体に別枠100%を付与し、ダメージ上限を増加します。",
+        "zh": "All Allies gain 100% other buff, and raise DMG cap.",
     },
     "内容を消去": {
         "en": "Delete",
@@ -2433,20 +2418,30 @@ var multiLangData = {
         "ja": "与ダメージ上昇20%UP(色々)",
         "zh": "与ダメージ上昇20%UP(色々)",
     },
-    "与ダメージ上昇20%UP&奥義ダメージ上限20%UP(最終十天衆)": {
+    "与ダメージ上昇20%UP&奥義ダメージ上限UP(最終十天衆)": {
         "en": "20% Boost to Damage and C.A. DMG Cap. (5★ Eternals)",
-        "ja": "与ダメージ上昇20%UP&奥義ダメージ上限20%UP(最終十天衆)",
-        "zh": "与ダメージ上昇20%UP&奥義ダメージ上限20%UP(最終十天衆)",
+        "ja": "与ダメージ上昇20%UP&奥義ダメージ上限UP(最終十天衆)",
+        "zh": "与ダメージ上昇20%UP&奥義ダメージ上限UP(最終十天衆)",
     },
-    "奥義ダメージ上限20%UP(最終十天衆)": {
-        "en": "20% Boost to C.A. DMG Cap. (5★ Eternals)",
-        "ja": "奥義ダメージ上限20%UP(最終十天衆)",
-        "zh": "奥義ダメージ上限20%UP(最終十天衆)",
+    "奥義ダメージ上限UP(最終十天衆)": {
+        "en": "Boost to C.A. DMG Cap. (5★ Eternals)",
+        "ja": "奥義ダメージ上限UP(最終十天衆)",
+        "zh": "奥義ダメージ上限UP(最終十天衆)",
     },
-    "奥義ダメージ上限25%UP(ルリア,SSRロボミ)": {
-        "en": "25% Boost to C.A. DMG Cap. (Robomi (SSR), Lyria)",
-        "ja": "奥義ダメージ上限25%UP(ルリア,SSRロボミ)",
-        "zh": "奥義ダメージ上限25%UP(ルリア,SSRロボミ)",
+    "奥義ダメージ上限UP(ルリア,SSRロボミ)": {
+        "en": "Boost to C.A. DMG Cap. (Robomi (SSR), Lyria)",
+        "ja": "奥義ダメージ上限UP(ルリア,SSRロボミ)",
+        "zh": "奥義ダメージ上限UP(ルリア,SSRロボミ)",
+    },
+    "奥義ダメージ上限UP&奥義倍率12.5(サーヴァンツ200%奥義時)": {
+        "en": "Boost to C.A. DMG Cap, Change C.A. Multiplier to 12.5. (Dorothy and Claudia 200% C.A.)",
+        "ja": "奥義ダメージ上限UP&奥義倍率12.5(サーヴァンツ200%奥義時)",
+        "zh": "奥義ダメージ上限UP&奥義倍率12.5(サーヴァンツ200%奥義時)",
+    },
+    "奥義ダメージ上限UP&奥義倍率7.0(ミリン200%奥義時)": {
+        "en": "Boost to C.A. DMG Cap, Change C.A. Multiplier to 7.0. (Mirin 200% C.A.)",
+        "ja": "奥義ダメージ上限UP&奥義倍率7.0(ミリン200%奥義時)",
+        "zh": "奥義ダメージ上限UP&奥義倍率7.0(ミリン200%奥義時)",
     },
     "奥義ダメージ上限100%UP(シャリオス17世)": {
         "en": "100% Boost to C.A. DMG Cap. (Charioce XVII)",
@@ -2473,6 +2468,11 @@ var multiLangData = {
         "en": "Amplify Meteon's one-foe attack damage by 50%. 110% boost to C.A. damage, 30% boost to C.A. damage cap, and 30% boost to dodge rate.Upon one-foe attack: Gain Charge Bar +10%. 500% Bonus Wind damage to all foes.(Meteon (Holiday))",
         "ja": "通常攻撃の与ダメージ大幅UP/奥義性能UP/回避率UP/通常攻撃後に敵全体に風属性ダメージを与え自分の奥義ゲージUP(10%)(ミュオン(クリスマスver))",
         "zh": "通常攻撃の与ダメージ大幅UP/奥義性能UP/回避率UP/通常攻撃後に敵全体に風属性ダメージを与え自分の奥義ゲージUP(10%)(ミュオン(クリスマスver))",
+    },
+    "連続攻撃が発生しない(ミュオン(クリスマスver))": {
+        "en": "Doesn't deal multiattacks.(Meteon (Holiday))",
+        "ja": "連続攻撃が発生しない(ミュオン(クリスマスver))",
+        "zh": "連続攻撃が発生しない(ミュオン(クリスマスver))",
     },
     "味方全体の強化効果「火属性攻撃UP」の効果30%UP。(シヴァ)": {
         "en": "Fire Allies gain an additional 30% boost to Element ATK when affected by Element ATK Buff. (Shiva)",
@@ -2665,18 +2665,8 @@ var multiLangData = {
         "ja": "予想ターンダメージ(ジータさんのみ)",
         "zh": "预测DPT(只考虑主角)",
     },
-    "予想秒毎ダメージ(ジータさんのみ)": {
-        "en": "Exp. Damage per Second (Player only)",
-        "ja": "予想秒ダメージ(ジータさんのみ)",
-        "zh": "预测DPS(只考虑主角)",
-    },
     "予想ターン毎ダメージのパーティ平均値": {
-        "en": "Party-Averaged Exp. Damage per Turn",
-        "ja": "予想ターン毎ダメージのパーティ平均値",
-        "zh": "预测DPT(全队平均值)",
-    },
-    "予想秒毎ダメージのパーティ平均値": {
-        "en": "Party-Averaged Exp. Damage per Second",
+        "en": "Party-Averaged Exp. Turn Damage",
         "ja": "予想ターン毎ダメージのパーティ平均値",
         "zh": "预测DPT(全队平均值)",
     },
@@ -2691,7 +2681,7 @@ var multiLangData = {
         "zh": "预测伤害(全队平均值",
     },
     "予想ダメージ平均の積分値": {
-        "en": "Integration of Party-Averaged Exp. Damage per Turn",
+        "en": "Integration of Party-Averaged Exp. Turn Damage",
         "ja": "予想ダメージ平均の積分値",
         "zh": "预测伤害平均积分值",
     },

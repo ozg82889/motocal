@@ -659,50 +659,6 @@
         "imageURL": "./charaimgs/3040169000_01.png",
         "en": "Nier"
     },
-    "ドランク(火属性ver)": {
-        "name": "ドランク(火属性ver)",
-        "ja": "ドランク(火属性ver)",
-        "element": "fire",
-        "type": "pecu",
-        "race": "erune",
-        "sex": "male",
-        "fav1": "wand",
-        "fav2": "none",
-        "support": "none",
-        "support2": "none",
-        "support3": "none",
-        "minhp": "220",
-        "hp": "1200",
-        "minattack": "1490",
-        "attack": "7720",
-        "baseDA": 7.0,
-        "baseTA": 3.0,
-        "ougiRatio": 4.5,
-        "imageURL": "./charaimgs/3040269000_01.png",
-        "en": "Drang"
-    },
-    "スツルム(水属性ver)": {
-        "name": "スツルム(水属性ver)",
-        "ja": "スツルム(水属性ver)",
-        "element": "water",
-        "type": "attack",
-        "race": "doraf",
-        "sex": "female",
-        "fav1": "sword",
-        "fav2": "none",
-        "support": "none",
-        "support2": "none",
-        "support3": "none",
-        "minhp": "260",
-        "hp": "1350",
-        "minattack": "1890",
-        "attack": "10080",
-        "baseDA": 7.0,
-        "baseTA": 3.0,
-        "ougiRatio": 4.5,
-        "imageURL": "./charaimgs/3040268000_01.png",
-        "en": "Sturm"
-    },
     "ムゲン": {
         "name": "ムゲン",
         "ja": "ムゲン",
@@ -1175,15 +1131,15 @@
         "fav1": "gun",
         "fav2": "fist",
         "support": "more_than_mere_speed",
-        "support2": "none",
+        "support2": "no_multi_attack",
         "support3": "none",
         "minhp": "205",
         "hp": "1200",
         "minattack": "1850",
         "attack": "9900",
-        "baseDA": 7.0,
-        "baseTA": 3.0,
-        "ougiRatio": 4.5,
+        "baseDA": 0,
+        "baseTA": 1000.0,
+        "ougiRatio": 12.5,
         "imageURL": "./charaimgs/3040246000_01.png",
         "en": "Meteon (Holiday)"
     },
@@ -3737,7 +3693,7 @@
         "baseTA": 3.0,
         "ougiRatio": 4.5,
         "imageURL": "./charaimgs/3040119000_01.png",
-        "en": "Drang (Grand)"
+        "en": "Drang"
     },
     "カタリナ(闇属性ver)": {
         "name": "カタリナ(闇属性ver)",
@@ -3774,12 +3730,12 @@
         "support2": "none",
         "support3": "none",
         "minhp": "420",
-        "hp": "2600",
+        "hp": "2180",
         "minattack": "1230",
-        "attack": "8190",
+        "attack": "6960",
         "baseDA": 7.0,
         "baseTA": 3.0,
-        "ougiRatio": 5.0,
+        "ougiRatio": 4.5,
         "imageURL": "./charaimgs/3040117000_01.png",
         "en": "Vane (SSR)"
     },
@@ -3825,7 +3781,7 @@
         "baseTA": 5.0,
         "ougiRatio": 4.5,
         "imageURL": "./charaimgs/3040115000_01.png",
-        "en": "Sturm (Grand)"
+        "en": "Sturm"
     },
     "レ・フィーエ(土属性ver)": {
         "name": "レ・フィーエ(土属性ver)",
@@ -4308,7 +4264,7 @@
         "baseDA": 10.0,
         "baseTA": 5.0,
         "ougiRatio": 4.5,
-        "imageURL": "./charaimgs/3040091000_91.png",
+        "imageURL": "./charaimgs/3040091000_01.png",
         "en": "Heles (Summer)"
     },
     "パーシヴァル(水着ver)": {
@@ -4352,7 +4308,7 @@
         "baseDA": 7.0,
         "baseTA": 3.0,
         "ougiRatio": 4.5,
-        "imageURL": "./charaimgs/3040089000_91.png",
+        "imageURL": "./charaimgs/3040089000_01.png",
         "en": "Narmaya (Summer)"
     },
     "イングヴェイ": {
@@ -9390,7 +9346,7 @@
         "baseDA": 7.0,
         "baseTA": 3.0,
         "ougiRatio": 3.5,
-        "imageURL": "./charaimgs/3030147000_91.png",
+        "imageURL": "./charaimgs/3030147000_01.png",
         "en": "Sara (Summer)"
     },
     "Ｊ・Ｊ(水着ver)": {

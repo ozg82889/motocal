@@ -240,6 +240,9 @@ supportAbilist["aegisUP_30"] = {
 supportAbilist["more_than_mere_speed"] = {
     u"ビヨンド・ザ・スピード"
 }
+supportAbilist["no_multi_attack"] = {
+    u"ナイトロ・リミッター"
+}
 supportAbilist["element_buff_boost_fire_30"] = {
     u"崇拝の尊神"
 }
@@ -444,11 +447,8 @@ patching["カルメリーナ"] = {"DA": 4.0, "TA": 1.0}
 patching["リヴァイ"] = {"DA": 0.0, "TA": 100.0}
 
 patching["勇者と姫君 スタン＆アリーザ"] = {"DA": 1000.0, "TA": 3.0}
-<<<<<<< Updated upstream
-=======
 patching["ミュオン(クリスマスver)"] = {"DA": 0, "TA": 1000.0}
 patching["グリームニル(バレンタインver)"] = {"DA": 1000.0, "TA": 1000.0}
->>>>>>> Stashed changes
 
 ### SR
 patching["リュウ"] = {"DA": 10.0, "TA": 5.0}
@@ -562,7 +562,6 @@ patchingOugiRatio["ラカム(リミテッドver)"] = {"ougiRatio": 5.0}
 patchingOugiRatio["黒騎士(リミテッドver)"] = {"ougiRatio": 5.0}
 patchingOugiRatio["ゼタ"] = {"ougiRatio": 5.0}
 patchingOugiRatio["ティアマト"] = {"ougiRatio": 5.0}
-patchingOugiRatio["ヴェイン(SSR)"] = {"ougiRatio": 5.0}
 
 ### SSR (Guardian Deity 5★) (最終十二神将)
 patchingOugiRatio["アンチラ"] = {"ougiRatio": 5.5}
@@ -597,11 +596,8 @@ patchingOugiRatio["サラ"] = {"ougiRatio": 5.0}
 patchingOugiRatio["レ・フィーエ"] = {"ougiRatio": 5.5}
 patchingOugiRatio["ロボミ(SSR)"] = {"ougiRatio": 12.5}
 patchingOugiRatio["シャリオス17世"] = {"ougiRatio": 12.5}
-<<<<<<< Updated upstream
-=======
 patchingOugiRatio["ミュオン(クリスマスver)"] = {"ougiRatio": 12.5}
 patchingOugiRatio["飛竜と吸血姫 ヴァンピィ＆ベス"] = {"ougiRatio": 12.5}
->>>>>>> Stashed changes
 
 ### SSR (Not to ougi)
 patchingOugiRatio["コルワ"] = {"ougiRatio": 0.0}
